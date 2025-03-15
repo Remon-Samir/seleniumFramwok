@@ -18,7 +18,7 @@ public class GoogleTest extends TestCase {
         Assert.assertTrue(new GooglePage(driver).navigateTo("https://www.google.com/ncr").isLogoDisplayed());
     }
 @Test
-    public void testThirdResultInFirefox(){
+    public void testThirdResultInFirefox() throws InterruptedException {
         Assert.assertEquals(new BingPage(driver).navigateTo("https://www.bing.com").searchFor("TestNG").getThirdSearchResult(), "TestNG Tutorial");
 }
 }
